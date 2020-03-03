@@ -1,0 +1,12 @@
+﻿
+1. ssm框架
+2. mysql5.6
+
+4. github下载项目代码
+https://github.com/zhihuiwang88?tab=repositories
+5. 天气接口API
+https://www.juhe.cn/docs/api/id/39
+
+
+
+

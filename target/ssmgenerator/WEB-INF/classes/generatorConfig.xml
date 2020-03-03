@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+<!-- 数据库连接 -->
+  <context id="perTables" targetRuntime="MyBatis3">
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+       connectionURL="jdbc:mysql://localhost:3306/check?useUnicode=true&amp;characterEncoding=utf8"
+       userId="root"
+       password="root123">
+    </jdbcConnection>
+
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+<!-- 实体类 -->
+    <javaModelGenerator targetPackage="com.nengliang.web.entity" targetProject="src/main/java">
+      <property name="enableSubPackages" value="true" />
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+<!-- User.xml -->
+    <sqlMapGenerator targetPackage="mapper"  targetProject="src/main/resources">
+      <property name="enableSubPackages" value="true" />
+    </sqlMapGenerator>
+<!-- interface User -->
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.nengliang.web.dao"  targetProject="src/main/java">
+      <property name="enableSubPackages" value="true" />
+    </javaClientGenerator>
+<!-- 数据库中的表名 -->
+    <table  tableName="com_house_xiao" domainObjectName="HouseXiao" >
+      <property name="useActualColumnNames" value="true"/>
+      <generatedKey column="xid" sqlStatement="MySql" identity="true" />
+    </table>
+
+
+  </context>
+</generatorConfiguration>
